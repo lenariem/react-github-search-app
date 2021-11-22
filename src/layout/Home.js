@@ -4,7 +4,7 @@ import Search from "../components/Search";
 
 export default function Home() {
   const cards = new Array(15).fill("").map((_, i) => i);
-  console.log(cards);
+
   return (
     <>
       <Search />
