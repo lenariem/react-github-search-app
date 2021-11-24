@@ -12,9 +12,7 @@ export const Alert = () => {
       role="alert"
     >
       {alert.text}
-      <button type="button" className="close" aria-label="Close" onClick={hide}>
-        <span aria-hidden="true">&times;</span>
-      </button>
+      <button type="button" class="btn-close" aria-label="Close" onClick={hide}></button>
     </div>
   )
 }
