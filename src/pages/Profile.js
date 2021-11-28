@@ -31,7 +31,7 @@ export const Profile = ({ match }) => {
     public_repos,
     public_gists,
   } = user;
-  console.log("blog " + blog);
+  
   return (
     <Fragment>
       <Link to="/" className="btn btn-link">
