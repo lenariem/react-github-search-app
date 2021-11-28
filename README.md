@@ -2,7 +2,7 @@
 
 **to take a look please click this link:** 
 
- https://lenariem.github.io/react-github-search/
+ https://lenariem.github.io/react-github-search-app/
 
 ### Technologies used: 
 * React JS;
