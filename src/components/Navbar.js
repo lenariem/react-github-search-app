@@ -6,9 +6,14 @@ export const Navbar = () => (
   <nav className="navbar navbar-dark bg-primary navbar-expand-lg">
     <NavLink exact to="/">
       <div className="navbar-brand mr-5">
-        Github User Search 
-        <img src={logoImg} alt="logo"  height="50" className="d-inline-block align-text-top" />
-    </div>
+        Github User Search
+        <img
+          src={logoImg}
+          alt="logo"
+          height="50"
+          className="d-inline-block align-text-top"
+        />
+      </div>
     </NavLink>
     <ul className="navbar-nav">
       <li className="nav-item">
@@ -23,5 +28,4 @@ export const Navbar = () => (
       </li>
     </ul>
   </nav>
-
 );
