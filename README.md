@@ -9,7 +9,7 @@ https://react-github-search-app.vercel.app/
 * SCSS;
 * Bootstrap;
 * Fetch API;
-* GitHub Pages;
+* Vercel;
 * responsive for different devices;
 
 ### User can:
