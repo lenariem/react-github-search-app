@@ -2,7 +2,7 @@
 
 **to take a look please click this link:** 
 
- https://lenariem.github.io/react-github-search-app/
+https://react-github-search-app.vercel.app/
 
 ### Technologies used: 
 * React JS;

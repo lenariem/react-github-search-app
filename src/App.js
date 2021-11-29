@@ -7,6 +7,7 @@ import { Profile } from "./pages/Profile";
 import { Alert } from "./components/Alert";
 import { AlertState } from "./context/alert/AlertState";
 import { GithubState } from "./context/github/GithubState";
+import { NotFound } from './pages/NotFound';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
               <Route path="/" exact component={Home} />
               <Route path="/about" component={About} />
               <Route path="/profile/:name" component={Profile} />
+              <Route component={NotFound} />
             </Switch>
           </div>
         </BrowserRouter>
