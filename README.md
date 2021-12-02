@@ -5,10 +5,10 @@
 https://react-github-search-app.vercel.app/
 
 ### Technologies used: 
-* React JS;
+* React JS (Context, hooks);
 * SCSS;
 * Bootstrap;
-* Fetch API;
+* axios;
 * Vercel;
 * responsive for different devices;
 

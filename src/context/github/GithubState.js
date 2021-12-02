@@ -28,12 +28,13 @@ export const GithubState = ({ children }) => {
   const [state, dispatch] = useReducer(githubReducer, initialState);
 
   const search = async (value) => {
-    setLoading();
+    setLoading(true);
 
     const response = await axios.get(
       withCreds(`https://api.github.com/search/users?q=${value}&`)
     );
 
+    setLoading(false);
     dispatch({
       type: SEARCH_USERS,
       payload: response.data.items,
@@ -41,12 +42,12 @@ export const GithubState = ({ children }) => {
   };
 
   const getUser = async (name) => {
-    setLoading();
+    setLoading(true);
 
     const response = await axios.get(
       withCreds(`https://api.github.com/users/${name}?`)
     );
-
+    setLoading(false);
     dispatch({
       type: GET_USER,
       payload: response.data,
@@ -54,12 +55,12 @@ export const GithubState = ({ children }) => {
   };
 
   const getRepos = async (name) => {
-    setLoading();
+    setLoading(true);
 
     const response = await axios.get(
       withCreds(`https://api.github.com/users/${name}/repos?per_page=5&`)
     );
-
+    setLoading(false);
     dispatch({
       type: GET_REPOS,
       payload: response.data,
