@@ -13,7 +13,9 @@ https://react-github-search-app.vercel.app/
 * responsive for different devices;
 
 ### User can:
-* search users by username or key words;
-* click on single item and get more information;
-* navigate between pages in the app
+* search for users by username or keyword;
+* click on a separate element and get additional information about the user;
+* see repositories from github;
+* go to user's profile on github;
+* navigate between pages in the app;
 
