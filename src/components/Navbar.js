@@ -4,7 +4,7 @@ import logoImg from "../img/github-logo.png";
 
 export const Navbar = () => (
   <nav className="navbar navbar-dark bg-primary navbar-expand-lg">
-    <NavLink exact to="/">
+    <NavLink exact to="/" data-cy="logoLink">
       <div className="navbar-brand mr-5">
         Github User Search
         <img
