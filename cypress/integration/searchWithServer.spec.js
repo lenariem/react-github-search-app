@@ -1,5 +1,5 @@
 //navigation
-//error
+//errors
 //single user page
 
 /// <reference types="cypress" />
@@ -7,24 +7,6 @@
 describe("Searching function test", () => {
     beforeEach(() => {
         cy.visit('http://localhost:3000')
-    })
-
-    it("search by a key word in a user name", () => {
-        cy.get("input")
-            .type("alex")
-            .should("have.value", "alex")
-        
-        cy.get('button').contains(/search/i).click()
-
-        cy.get('.card').should(($card) => {
-            // should have found 30 users
-            expect($card).to.have.length(30)
-
-            // make sure the first contains search text content
-            expect($card.first()).to.contain('alex')
-        })
-
-        cy.contains(/found 30 users/i)
     })
 
     it("search by a key word in a technolody", () => {
@@ -37,8 +19,25 @@ describe("Searching function test", () => {
         // make sure all found users contain search text 
         cy.get('.card')
             .should($card => {
-                expect($card).to.contain(/reactJS/)
+                expect($card).to.contain(/reactjs/)
             })
+    })
+
+    it("search by a key word in a user name", () => {
+        cy.get("input")
+            .type("alex")
+            .should("have.value", "alex")
+        
+        cy.get('button').contains(/search/i).click()
+
+        cy.get('.card').should('have.length', 30)
+
+        cy.get('.card').should(($card) => {
+            // make sure the first contains search text content
+            expect($card.first()).to.contain('alex')
+        })
+
+        cy.contains(/found 30 users/i)
     })
 
     it("search a single user", () => {

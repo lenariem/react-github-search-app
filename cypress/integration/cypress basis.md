@@ -83,3 +83,12 @@ describe("Locators", () => {
   //npx cypress open
 
   //adding tests in folder integration
+
+  const CLIENT_ID = process.env.REACT_APP_CLIENT_ID;
+        const CLIENT_SECRET = process.env.REACT_APP_CLIENT_SECRET;
+        const url = `https://api.github.com/search/users?q=reactJS&client_id=${CLIENT_ID}&client_secret=${CLIENT_SECRET}`;
+        console.log(url)
+        
+        cy.intercept("GET", url,{
+             fixture: "ghUsers.json"
+        })

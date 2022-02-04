@@ -20,6 +20,7 @@ describe("Search input", () => {
         cy.get('button').contains(/search/i).click()
 
         cy.get('.card').contains("lenariem")
+        //cy.get('.card').should('contain', 'lenariem')
             
         cy.contains(/found 1 users/i)
     })
