@@ -1,0 +1,27 @@
+{
+    "total_count": 1,
+    "incomplete_results": false,
+    "items": [
+        {
+            "login": "lenariem",
+            "id": 58471286,
+            "node_id": "MDQ6VXNlcjU4NDcxMjg2",
+            "avatar_url": "https://avatars.githubusercontent.com/u/58471286?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/lenariem",
+            "html_url": "https://github.com/lenariem",
+            "followers_url": "https://api.github.com/users/lenariem/followers",
+            "following_url": "https://api.github.com/users/lenariem/following{/other_user}",
+            "gists_url": "https://api.github.com/users/lenariem/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/lenariem/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/lenariem/subscriptions",
+            "organizations_url": "https://api.github.com/users/lenariem/orgs",
+            "repos_url": "https://api.github.com/users/lenariem/repos",
+            "events_url": "https://api.github.com/users/lenariem/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/lenariem/received_events",
+            "type": "User",
+            "site_admin": false,
+            "score": 1.0
+        }
+    ]
+}

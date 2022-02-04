@@ -29,7 +29,24 @@ describe("Searching function test", () => {
      })
 
 
-     
+     it("search a single user with mock", () => {
+        cy.intercept(
+            "GET",
+            'https://api.github.com/search/*', 
+            { fixture: 'oneUser.json' }).as('getUser')
+
+        cy.get("input")
+            .type("lenariem")
+            .should("have.value", "lenariem")
+        
+        cy.get('button').contains(/search/i).click()
+
+        cy.wait('@getUser')
+
+        cy.get('.card').contains("lenariem")
+            
+        cy.contains(/found 1 users/i)
+    })
 })
 
 
