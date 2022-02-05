@@ -84,6 +84,4 @@ describe("Locators", () => {
 
   //adding tests in folder integration
 
-   /*  cy.get('a[href*="https://github.com/lenariem"]').should('be.visible')
-        cy.get('a[href*="https://www.linkedin.com/in/elenariemer/"]').should('be.visible') */
-        /* cy.get(".card mb-3").should('have.length', 5) */
+   
