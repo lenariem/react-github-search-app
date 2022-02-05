@@ -1,19 +1,13 @@
-//navigation
-//errors
-
 /// <reference types="cypress" />
 
-describe("Searching function test", () => {
+describe("Searching function test with server", () => {
     beforeEach(() => {
         cy.visit('http://localhost:3000')
     })
 
     it("search by a key word in a technolody", () => {
-        cy.get("input")
-            .type("reactJS")
-            .should("have.value", "reactJS")
-        
-        cy.get('button').contains(/search/i).click()
+         //from commands
+        cy.typeSearchTerm("reactJS")
 
         // make sure all found users contain search text 
         cy.get('.card')
@@ -23,11 +17,8 @@ describe("Searching function test", () => {
     })
 
     it("search by a key word in a user name", () => {
-        cy.get("input")
-            .type("alex")
-            .should("have.value", "alex")
-        
-        cy.get('button').contains(/search/i).click()
+        //from commands
+        cy.typeSearchTerm("alex")
 
         cy.get('.card').should('have.length', 30)
 
@@ -40,11 +31,8 @@ describe("Searching function test", () => {
     })
 
     it("search a single user", () => {
-        cy.get("input")
-            .type("lenariem")
-            .should("have.value", "lenariem")
-        
-        cy.get('button').contains(/search/i).click()
+         //from commands
+        cy.typeSearchTerm("lenariem")
 
         cy.get('.card').contains("lenariem")
             

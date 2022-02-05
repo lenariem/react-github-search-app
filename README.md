@@ -9,8 +9,10 @@ https://react-github-search-app.vercel.app/
 * SCSS;
 * Bootstrap;
 * axios;
+* Cypress
 * Vercel;
 * responsive for different devices;
+
 
 ### User can:
 * search for users by username or keyword;

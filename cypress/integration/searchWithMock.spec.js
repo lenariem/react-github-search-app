@@ -1,7 +1,6 @@
-
 /// <reference types="cypress" />
 
-describe("Searching function test", () => {
+describe("Searching function test with mock", () => {
     beforeEach(() => {
         cy.visit('http://localhost:3000')
     })
@@ -12,11 +11,8 @@ describe("Searching function test", () => {
             'https://api.github.com/search/*', 
             { fixture: 'ghUsers.json' }).as('getSearch')
 
-        cy.get("input")
-            .type("reactJS")
-            .should("have.value", "reactJS")
-        
-        cy.get('button').contains(/search/i).click()
+        //from commands
+        cy.typeSearchTerm("reactJS")
 
         cy.wait('@getSearch')
 
@@ -35,11 +31,8 @@ describe("Searching function test", () => {
             'https://api.github.com/search/*', 
             { fixture: 'oneUser.json' }).as('getUser')
 
-        cy.get("input")
-            .type("lenariem")
-            .should("have.value", "lenariem")
-        
-        cy.get('button').contains(/search/i).click()
+        //from commands
+        cy.typeSearchTerm("lenariem")
 
         cy.wait('@getUser')
 

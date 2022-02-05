@@ -1,10 +1,10 @@
 /// <reference types="cypress" />
 
-describe("Single user page", () => {
+describe("Single user page with server", () => {
      it("correct rendering a single user page", () => {
         cy.visit('http://localhost:3000')
-        cy.get("input").type("lenariem")
-        cy.get('button').contains(/search/i).click()
+         //from commands
+        cy.typeSearchTerm("lenariem")
         cy.get('[href="/profile/lenariem"]').click()
 
         cy.get("img").should('have.class', 'rounded')

@@ -25,4 +25,10 @@
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
 
-
+Cypress.Commands.add("typeSearchTerm", (searchTerm) => {
+    cy.get("input")
+            .type(searchTerm)
+            .should("have.value", searchTerm)
+        
+    cy.get('button').contains(/search/i).click()
+})

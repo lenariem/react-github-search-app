@@ -1,4 +1,4 @@
-// <reference types="cypress" />
+/// <reference types="cypress" />
 
 describe("Single user page with mock", () => {
      it("correct rendering a single user page", () => {
@@ -13,8 +13,8 @@ describe("Single user page with mock", () => {
             { fixture: 'userRepos.json' }).as('getRepos')
         
         cy.visit('http://localhost:3000')
-        cy.get("input").type("lenariem")
-        cy.get('button').contains(/search/i).click()
+         //from commands
+        cy.typeSearchTerm("lenariem")
         cy.wait('@getUser')
 
         cy.get('[href="/profile/lenariem"]').click()
