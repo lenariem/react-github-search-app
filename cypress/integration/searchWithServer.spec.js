@@ -1,6 +1,5 @@
 //navigation
 //errors
-//single user page
 
 /// <reference types="cypress" />
 
